@@ -1,0 +1,17 @@
+extends ..\layout
+
+block content
+	h1= message
+	form(method='POST' action='')
+		div.form-group
+			label(for='word1') Word 1:
+			select#word1.form-control(name='word1')
+				each v1 in words
+					option(value=v1._id) #{v1.name}
+		div.form-group
+			label(for='word1') Word 2:
+			select#word2.form-control(name='word2')
+				each v1 in words
+					option(value=v1._id) #{v1.name}
+		div.form-group
+			button.btn.btn-primary(type='submit') Submit

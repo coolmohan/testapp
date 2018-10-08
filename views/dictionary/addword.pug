@@ -1,0 +1,16 @@
+extends ..\layout
+
+block content
+	h1= message
+	form(method='POST' action='')
+		div.form-group
+			label(for='word') Word:
+			input#word.form-control(type='text' placeholder='word' name='word' required='true')
+		div.form-group
+			label(for='languagee_id') Language:
+			input#languagee_id.form-control(type='text' placeholder='languagee_id' name='languagee_id' required='true')
+		div.form-group
+			label(for='word_type_id') Type:
+			input#word_type_id.form-control(type='text' placeholder='word_type_id' name='word_type_id' required='true')
+		div.form-group
+			button.btn.btn-primary(type='submit') Submit
